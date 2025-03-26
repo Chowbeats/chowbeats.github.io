@@ -1,3 +1,7 @@
 .linkbutton{
     margin-right: 1rem;
 }
+
+.navbar-light {
+    background: #ffffff !important;
+}
