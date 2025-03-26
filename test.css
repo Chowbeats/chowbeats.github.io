@@ -5,3 +5,22 @@
 .navbar-light {
     background: #ffffff !important;
 }
+
+.specs-image { 
+    margin-top: 50px;
+}
+
+.spec-list {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+ .list-title{
+    color: green;
+    font-weight: bold;
+ }
