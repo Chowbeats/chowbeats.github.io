@@ -24,3 +24,17 @@
     color: green;
     font-weight: bold;
  }
+
+ .card-body {
+    padding-left: 2%;
+    font-weight: bold;
+ }
+
+ #cloverlabqr{
+    width: 35%;
+    margin-top: 10px;
+ }
+
+ .clover-lab-container{
+    margin-top: 10px;
+ }

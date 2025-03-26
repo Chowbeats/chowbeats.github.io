@@ -12,60 +12,40 @@
     <link rel="stylesheet" href="test.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" id="navtitle">
-          <img
-            src="https://cloverstatic.com/web/apps/cloverdotcom/release::v2.122.2-aa2424ebc5886/assets/media/clover-logo.5637c88fda21055b797e300e16140c95.svg"
-            alt="Logo"
-            width="164"
-            height="40"
-            class="d-inline-block"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-success me-22 linkbutton active"
-                href="document.html"
-                >Documentation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="btn btn-outline-success me-22 linkbutton"
-                href="clover_lab.html"
-                >Clover Lab</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="btn btn-outline-success me-22 linkbutton"
-                href="app_market.html"
-                >App Market</a
-              >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"></a></li>
-                <li><a class="dropdown-item" href="#"></a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#"></a></li>
-              </ul>
-            </li>
-          </ul>
+    <nav class="navbar navbar-light navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="navtitle">
+            <img
+              src="https://cloverstatic.com/web/apps/cloverdotcom/release::v2.122.2-aa2424ebc5886/assets/media/clover-logo.5637c88fda21055b797e300e16140c95.svg"
+              alt="Logo"
+              width="164"
+              height="40"
+              class="d-inline-block"
+          /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="btn btn-outline-success me-22 linkbutton" href="document.html">Documentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-success me-22 linkbutton" href="clover_lab.html">Clover Lab</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="btn btn-outline-success me-22 linkbutton" href="app_market.html">App Market</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#"></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
     <div class="container specs-image">
       <div class="container text-center">
@@ -285,7 +265,7 @@
               </a>
               <div class="collapse" id="camera">
                 <div class="card-body text-start">
-                    Camera Color camera (5MP)
+                    Color camera (5MP)
                 </div>
               </div>
             </li>
@@ -326,9 +306,7 @@
               </a>
               <div class="collapse" id="processor">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    Qualcomm Snapdragon-8 Cores Processor, 1.843GHz 4 Cores and 2.2GHz 4 Cores
                 </div>
               </div>
             </li>
@@ -345,9 +323,7 @@
               </a>
               <div class="collapse" id="memory">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    2GB LPDDR4x
                 </div>
               </div>
             </li>
@@ -364,12 +340,27 @@
               </a>
               <div class="collapse" id="storage">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    16GB eMMC
                 </div>
               </div>
             </li>
+            <li class="list-group-item">
+                <a
+                  class="btn border-0"
+                  data-bs-toggle="collapse"
+                  href="#storage"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="storage"
+                >
+                  Operating System
+                </a>
+                <div class="collapse" id="storage">
+                  <div class="card-body text-start">
+                    Android 10.X, multilanguage support
+                  </div>
+                </div>
+              </li>
             <li class="list-group-item">
               <a class="btn border-0 list-title"> Display </a>
             </li>
@@ -386,9 +377,7 @@
               </a>
               <div class="collapse" id="display">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    8.0" IPS HD Display
                 </div>
               </div>
             </li>
@@ -405,9 +394,7 @@
               </a>
               <div class="collapse" id="resolution">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    1280 x 800 pixels
                 </div>
               </div>
             </li>
@@ -429,9 +416,7 @@
               </a>
               <div class="collapse" id="dimension">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    10.7 cm x 21cm x 17cm
                 </div>
               </div>
             </li>
@@ -448,9 +433,7 @@
               </a>
               <div class="collapse" id="dev-weight">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    1130g
                 </div>
               </div>
             </li>
@@ -467,9 +450,7 @@
               </a>
               <div class="collapse" id="battery">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    Not supported
                 </div>
               </div>
             </li>
@@ -486,9 +467,9 @@
               </a>
               <div class="collapse" id="printer">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    High-Speed Thermal Printer/2.25"
+                    Printer Roll Width and up to 50mm (2")
+                    diameter rolls
                 </div>
               </div>
             </li>
@@ -505,9 +486,7 @@
               </a>
               <div class="collapse" id="camera">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    5.0M Pixel
                 </div>
               </div>
             </li>
@@ -524,9 +503,7 @@
               </a>
               <div class="collapse" id="bar-code">
                 <div class="card-body text-start">
-                  Some placeholder content for the collapse component. This
-                  panel is hidden by default but revealed when the user
-                  activates the relevant trigger.
+                    1D/2D barcode scanning through camera   
                 </div>
               </div>
             </li>
