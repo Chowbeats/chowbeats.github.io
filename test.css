@@ -44,3 +44,11 @@
     margin-bottom: 15px;
     color: #20871e;
  }
+
+ .accordion-index {
+    margin-bottom: 50px;
+ }
+ 
+.accordion-item {
+    --accordion-bg: green;
+}
