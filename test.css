@@ -31,7 +31,7 @@
  }
 
  #cloverlabqr{
-    width: 60%;
+    width: 55%;
     margin-top: 10px;
  }
 
@@ -55,8 +55,8 @@
 	--bs-accordion-active-color: ghostwhite;
 	--bs-accordion-active-bg:#20871e;
     --bs-accordion-btn-focus-box-shadow: none;
-    ;
 }
+
 
 .accordion-button {
     font-weight: bold;
