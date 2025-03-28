@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>App Market</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id="navtitle">
+          <img
+            src="https://cloverstatic.com/web/apps/cloverdotcom/release::v2.122.2-aa2424ebc5886/assets/media/clover-logo.5637c88fda21055b797e300e16140c95.svg"
+            alt="Logo"
+            width="164"
+            height="40"
+            class="d-inline-block"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="btn me-22 linkbutton" href="device_specs.html"
+                >Device Specs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="btn me-22 linkbutton" href="clover_lab.html"
+                >Clover Lab</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="btn me-22 linkbutton active" href="app_market.html"
+                >App Market</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="btn me-22 linkbutton" href="documentation.html"
+                >Documents</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container">
+        <div class="mt-4 p-5 rounded index-jumbo">
+          <h1>Integração Clover</h1>
+          <p>Entre para a lista de espera do Clover Kiosk!</p>
+        </div>
+      </div>
+      <div class="container">
+        <form id="infoForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="company" class="form-label">Empresa</label>
+            <input type="text" class="form-control" id="company" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="phone" required />
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-outline-success container-fluid"
+            id="btn-kiosk"
+          >
+            Cadastrar!
+          </button>
+          <button
+            type="button"
+            class="btn btn-success ms-2"
+            onclick="downloadJSON()"
+          >
+            Download JSON
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Load existing data from localStorage or initialize
+      const allEntries = JSON.parse(localStorage.getItem("customerData")) || [];
+
+      document
+        .getElementById("infoForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const company = document.getElementById("company").value;
+          const phone = document.getElementById("phone").value;
+
+          const entry = { name, company, phone };
+
+          allEntries.push(entry);
+          localStorage.setItem("customerData", JSON.stringify(allEntries));
+
+          e.target.reset();
+          alert("Entry saved and persisted!");
+        });
+
+      function downloadJSON() {
+        const data = localStorage.getItem("customerData") || "[]";
+        const blob = new Blob([data], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "customer_data.json";
+        a.click();
+
+        URL.revokeObjectURL(url);
+      }
+    </script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
