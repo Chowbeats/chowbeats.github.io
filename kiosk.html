@@ -117,25 +117,13 @@
         const data = { name, company, phone };
 
         try {
-          // const response = await fetch('https://script.google.com/macros/s/AKfycbyf7opHIfiZCwJYXX8SurUIQA0TyjRt-VyGbhkQtkoyfB7yjdPCUU5Yoqug0BL0w1YlNQ/exec', {
-          // method: 'POST',
-          // body: JSON.stringify(data),
-          // headers: {
-          // 'Content-Type': 'application/json'
-          // }
-          // });
-          const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbzG_rh9qfd9u20hIXXBM2iR-cy0u8NfgrlJ2bNSl9bX7cE5JjwP8tycBrAPDRC6BdZt/exec",
-            {
-              method: "POST",
-              body: JSON.stringify({
-                name: "Test",
-                company: "Chowbeats",
-                phone: "123-456",
-              }),
-              headers: { "Content-Type": "application/json" },
-            }
-          );
+          const response = await fetch('https://script.google.com/macros/s/AKfycbyf7opHIfiZCwJYXX8SurUIQA0TyjRt-VyGbhkQtkoyfB7yjdPCUU5Yoqug0BL0w1YlNQ/exec', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+          'Content-Type': 'application/json'
+          }
+          });
 
           const result = await response.json();
 
