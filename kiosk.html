@@ -104,40 +104,41 @@
     </div>
 
     <script>
-      // Load existing data from localStorage or initialize
-      const allEntries = JSON.parse(localStorage.getItem("customerData")) || [];
-
-      document
-        .getElementById("infoForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const name = document.getElementById("name").value;
-          const company = document.getElementById("company").value;
-          const phone = document.getElementById("phone").value;
-
-          const entry = { name, company, phone };
-
-          allEntries.push(entry);
-          localStorage.setItem("customerData", JSON.stringify(allEntries));
-
-          e.target.reset();
-          alert("Entry saved and persisted!");
+        const form = document.getElementById('infoForm');
+        const statusDiv = document.createElement('div');
+        form.appendChild(statusDiv);
+        
+        form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const company = document.getElementById('company').value;
+        const phone = document.getElementById('phone').value;
+        
+        const data = { name, company, phone };
+        
+        try {
+        const response = await fetch('YOUR_GOOGLE_SCRIPT_URL', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+        'Content-Type': 'application/json'
+        }
         });
-
-      function downloadJSON() {
-        const data = localStorage.getItem("customerData") || "[]";
-        const blob = new Blob([data], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "customer_data.json";
-        a.click();
-
-        URL.revokeObjectURL(url);
-      }
-    </script>
+        
+        const result = await response.json();
+        
+        if (result.result === 'success') {
+        alert('Entry saved online!');
+        form.reset();
+        } else {
+        alert('Error saving entry.');
+        }
+        } catch (error) {
+        alert('Failed to connect: ' + error.message);
+        }
+        });
+        </script>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
