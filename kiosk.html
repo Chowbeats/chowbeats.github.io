@@ -118,7 +118,7 @@
         const data = { name, company, phone };
         
         try {
-        const response = await fetch('YOUR_GOOGLE_SCRIPT_URL', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbyf7opHIfiZCwJYXX8SurUIQA0TyjRt-VyGbhkQtkoyfB7yjdPCUU5Yoqug0BL0w1YlNQ/exec', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
