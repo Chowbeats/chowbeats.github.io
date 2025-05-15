@@ -64,3 +64,7 @@
 #btn-kiosk{
     margin-bottom: 15px;
 }
+
+#phone {
+    color: #20871e; /* Matches the header color */
+}
